@@ -164,7 +164,7 @@ body {
 }
 .header-mail-link:hover::before,
 .header-mail-link:focus::before {
-    content: '';
+  content: '';
   height: 12px;
   width: 16px;
   background-image: url(../images/svg/header-svg-1-hover.svg);
