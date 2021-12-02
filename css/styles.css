@@ -249,8 +249,8 @@ body {
   height: 50px;
   padding: 10px 32px 10px 32px;
   background-color: var(--accent-color);
- box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .peculiarities-section {
   padding-top: 94px;
@@ -264,12 +264,10 @@ border-radius: 4px;
 }
 .peculiarities-icon-item {
   content: '';
-  height: 120px;
   width: 270px;
-  margin-bottom: 30px;
-  background-color: var(--background-btn-color);
-    display: flex;
-  align-items: center;
+  margin-bottom: 30px;  
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .peculiarities-icon-item:not(:last-child){
@@ -279,17 +277,21 @@ border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-btn-color);
+  height: 120px;
+  width: 100%;
+  margin-bottom: 30px;
 }
-.main-list {
+/* .main-list {
   display: flex;
   
-}
-.main-item {
+} */
+/* .main-item {
   width: 270px;
-}
-.main-item:not(:last-child) {
+} */
+/* .main-item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 .main-item-heading {
   font-weight: 700;
   font-size: 14px;
@@ -430,40 +432,35 @@ border-radius: 4px;
 }
 .regular-customers-list {
   display: flex;
+  justify-content: center;
 }
-.regular-customers-item {
-  content: '';
-  height: 92px;
+.regular-customers-item{
+  display: flex;
   width: 170px;
-  border: 1px solid #AFB1B8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-
+  height: 92px;
 }
-.regular-customers-item:not(:last-child) {
-  margin-right: 30px;
+.regular-customers-item + .regular-customers-item {
+  margin-left: 30px;
 }
-.reugular-customers-link {
+.regular-customers-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  object-fit: contain;
-
+  align-items: center;
 }
 .regular-customers-icon {
   fill: #afb1b8;
-  margin: 16px 32px;
 }
-.regular-customers-item:hover,
-.regular-customers-item:focus {
-  border: 1px solid #2196f3;
-  
+.regular-customers-link:hover, 
+.regular-customers-link:focus {
+   border: 1px solid #2196f3;
 }
-.regular-customers-item:hover .regular-customers-icon,
-.regular-customers-item:focus .regular-customers-icon {
-   fill: var(--accent-color);
+.regular-customers-link:hover .regular-customers-icon, 
+.regular-customers-link:focus  .regular-customers-icon {
+  fill: #2196f3;
 }
 
 .footer {
@@ -589,6 +586,10 @@ padding-top: 94px;
 .btn-item:focus {
   color: var(--first-btn-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px
+rgba(0, 0, 0, 0.12),  0px 1px 2px
+rgba(0, 0, 0, 0.08), 0px 3px 1px
+rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-list {
